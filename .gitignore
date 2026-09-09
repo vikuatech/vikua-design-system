@@ -1,0 +1,19 @@
+# Dependencias y build
+node_modules/
+dist/
+*.tgz
+
+# Entorno
+.env
+.env.*
+!.env.example
+
+# Sistema operativo / Explorador de Windows
+desktop.ini
+Thumbs.db
+.DS_Store
+*.log
+
+# Duplicado byte a byte de uploads/apalanca-manual.pdf (6 MB cada uno).
+# Se versiona solo el canonico; el readme apunta a el.
+uploads/Apalanca Manual de Marca (1).pdf

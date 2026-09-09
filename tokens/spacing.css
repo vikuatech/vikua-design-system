@@ -1,0 +1,7 @@
+:root{
+/* Base 4. La aplicacion respira en multiplos de 8; los componentes densos en multiplos de 4 */
+--vk-space-1:4px;--vk-space-2:8px;--vk-space-3:12px;--vk-space-4:16px;--vk-space-5:20px;--vk-space-6:28px;--vk-space-7:56px;
+--vk-radius-sm:6px;--vk-radius-md:8px;--vk-radius-lg:12px;--vk-radius-pill:999px;
+--vk-sidebar-width:236px;--vk-page-margin:28px;--vk-grid-gap:16px;
+--vk-control-sm:32px;--vk-control-md:40px;--vk-control-lg:48px;--vk-row-height:46px;--vk-fab-size:52px;
+}

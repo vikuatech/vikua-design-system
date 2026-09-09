@@ -1,0 +1,40 @@
+<!-- @dsCard group="Components" viewport="700x400" name="Estado y retroalimentacion" subtitle="Chips, etiquetas, alertas, esqueletos, vacio, error y modal" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css"><style>body{margin:0;padding:16px;background:var(--vk-canvas);font-family:var(--vk-font-ui);color:var(--vk-text)}.lbl{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--vk-text-subtle);font-weight:700;margin-bottom:8px}.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.col{display:flex;flex-direction:column;gap:10px}.mono{font-variant-numeric:tabular-nums}</style></head><body><div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/feather-icons@4.29.2/dist/feather.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const { Chip, StatusBadge, Alert, Skeleton, EmptyState, ErrorState, Modal, Field } = window.VikuaDesignSystem_da98a9;
+
+function Demo(){return (<div className="col" style={{gap:16}}>
+<div className="row" style={{gap:10}}>
+<Chip selected>Filtro activo</Chip><Chip>Radio 2,0 km</Chip><Chip variant="dashed">+ Nueva capa</Chip><Chip variant="fill">Kontur Population</Chip>
+</div>
+<div className="row" style={{gap:10}}>
+<StatusBadge tone="success">Aprobado</StatusBadge><StatusBadge tone="warning">En revision</StatusBadge><StatusBadge tone="danger">No disponible</StatusBadge>
+<StatusBadge tone="risk">Riesgo</StatusBadge><StatusBadge tone="info">Oportunidad</StatusBadge><StatusBadge tone="pattern">Patron</StatusBadge>
+</div>
+<div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16,alignItems:'start'}}>
+<div className="col" style={{gap:10}}>
+<Alert tone="success" title="Fuente conectada" description="Google Places sincronizo 2.481 registros." />
+<Alert tone="warning" title="Cobertura parcial" description="4 de 52 hexagonos sin datos de competencia." />
+<Alert tone="danger" title="Consulta fallida" description="Sin conexion con BigQuery. Reintentar en 30 s." />
+<Alert tone="brand" title="Tablero exportado" description="Se descargo Cobertura_Caracas.pdf" actionLabel="Deshacer" />
+</div>
+<div className="col" style={{gap:12}}>
+<div className="col" style={{gap:8}}><Skeleton shape="text" width="70%" /><Skeleton shape="control" /><Skeleton shape="text" width="45%" /></div>
+<EmptyState title="Aun no hay tableros" description="Conecta una fuente de datos para generar tu primer analisis." actionLabel="Conectar fuente" />
+<ErrorState title="No pudimos cargar el tablero" description="La consulta a BigQuery supero el tiempo de espera." secondaryLabel="Ver detalle" />
+</div>
+</div>
+<div style={{background:'var(--vk-canvas)',display:'flex',justifyContent:'center',padding:20}}>
+<Modal title="Nuevo analisis" description="Define el area y las variables que quieres cruzar." confirmLabel="Crear analisis">
+<div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16}}><Field label="Ubicacion" value="Caracas, Venezuela" /><Field label="Radio" value="2,0 km" /></div>
+</Modal>
+</div>
+</div>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body></html>

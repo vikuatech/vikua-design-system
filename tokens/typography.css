@@ -1,0 +1,15 @@
+:root{
+--vk-font-brand:'Poppins',sans-serif;
+--vk-font-ui:'Public Sans',sans-serif;
+/* Display 44/46 · Titulo 1 32/38 · Titulo 2 24/30 · Titulo tarjeta 17/24 · Metrica 32/36
+   Cuerpo 15/24 · Cuerpo compacto 13.5/21 · Etiqueta 12/16 */
+--vk-display-size:44px;--vk-display-line:46px;--vk-display-track:-0.03em;
+--vk-h1-size:32px;--vk-h1-line:38px;--vk-h1-track:-0.025em;
+--vk-h2-size:24px;--vk-h2-line:30px;--vk-h2-track:-0.02em;
+--vk-card-title-size:17px;--vk-card-title-line:24px;
+--vk-metric-size:32px;--vk-metric-line:36px;--vk-metric-track:-0.02em;
+--vk-body-size:15px;--vk-body-line:24px;
+--vk-body-compact-size:13.5px;--vk-body-compact-line:21px;
+--vk-label-size:12px;--vk-label-line:16px;--vk-label-track:0.12em;
+--vk-weight-regular:400;--vk-weight-medium:500;--vk-weight-semibold:600;--vk-weight-bold:700;
+}

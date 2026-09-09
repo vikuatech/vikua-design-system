@@ -1,0 +1,15 @@
+/* Marca respaldada: un producto solo redefine los tokens tematizables.
+   Aplicar como clase o data-attribute en el contenedor raiz del producto. */
+/* Apalanca por Vikua — valores del Manual de Identidad Corporativa (28 pp.).
+   Coral = acento y llamados a la accion · Tinta = tipografia y logotipo ·
+   Neutros = fondos claros. Los semanticos son identicos al nucleo. */
+[data-vk-theme="apalanca"]{
+--vk-accent:#D85A30;--vk-accent-hover:#993C1D;--vk-accent-soft:rgba(216,90,48,0.16);--vk-accent-tint:#FAECE7;
+--vk-canvas:#F1EFE8;--vk-surface:#FFFFFF;--vk-surface-alt:#FAECE7;--vk-surface-subtle:#F1EFE8;
+--vk-brand-deep:#16151A;--vk-text:#16151A;--vk-text-strong-2:#4A473F;--vk-text-muted:#6B6862;--vk-text-subtle:#B4B2A9;
+--vk-border:#E1DED3;--vk-border-strong:#DDD9CE;--vk-border-dashed:#C9C6BB;
+--vk-font-brand:'ITC Avant Garde Gothic','Poppins',sans-serif;
+--vk-font-ui:'TT FORS','Public Sans',sans-serif;
+}
+[data-vk-theme="studio"]{--vk-accent:#6C4FB8;--vk-accent-hover:#573F96;--vk-accent-soft:rgba(108,79,184,0.16)}
+[data-vk-theme="taxmind"]{--vk-accent:#1D9E75;--vk-accent-hover:#17805F;--vk-accent-soft:rgba(29,158,117,0.16)}

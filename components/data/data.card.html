@@ -1,0 +1,31 @@
+<!-- @dsCard group="Components" viewport="700x400" name="Datos" subtitle="Tarjeta, metricas, tabla, barras y leyendas de datos" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css"><style>body{margin:0;padding:16px;background:var(--vk-canvas);font-family:var(--vk-font-ui);color:var(--vk-text)}.lbl{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--vk-text-subtle);font-weight:700;margin-bottom:8px}.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.col{display:flex;flex-direction:column;gap:10px}.mono{font-variant-numeric:tabular-nums}</style></head><body><div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/feather-icons@4.29.2/dist/feather.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const { Card, Metric, DataTable, BarChart, DataLegend } = window.VikuaDesignSystem_da98a9;
+
+function Demo(){return (<div className="col" style={{gap:16}}>
+<div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12}}>
+<Metric label="Poblacion alcanzada" value="184.320" delta="↑ 3,10% vs. 2023" deltaTone="up" />
+<Metric label="Precio m² venta" value="$1.240" delta="↓ 1,80% trimestre" deltaTone="down" />
+<Metric label="Cobertura de datos" value="92%" progress={92} />
+<Metric label="Indice de oportunidad" value="86" note="Top 10% del area" tone="brand" />
+</div>
+<div style={{display:'grid',gridTemplateColumns:'1.4fr 1fr',gap:16,alignItems:'start'}}>
+<DataTable title="Tabla de datos" caption="4 de 128 filas"
+ columns={[{key:'n',label:'Nombre'},{key:'p',label:'Poblacion',numeric:true},{key:'c',label:'Competidores',numeric:true},{key:'i',label:'Indice',numeric:true,emphasis:true}]}
+ rows={[{n:'Chacao',p:'42.180',c:14,i:86},{n:'El Recreo',p:'38.940',c:11,i:79},{n:'Leoncio Martinez',p:'31.205',c:9,i:74},{n:'San Bernardino',p:'27.860',c:null,i:61}]} />
+<Card title="Graficos">
+<BarChart data={[{label:'Chacao',value:78},{label:'Recreo',value:62},{label:'L. Martinez',value:94},{label:'S. Bernardino',value:48}]} highlight={2} height={100} />
+<div style={{height:16}} />
+<DataLegend scale="sequential" title="Densidad" includeNull />
+</Card>
+</div>
+</div>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body></html>

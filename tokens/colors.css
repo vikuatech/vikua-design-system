@@ -1,0 +1,27 @@
+:root{
+/* Paleta corporativa — manual de identidad */
+--vk-blue-deep:#001332;--vk-cyan:#3BBEFC;--vk-orange:#FF7335;--vk-yellow:#FFD83E;--vk-lime:#DAE667;--vk-grey-light:#F4F6FA;
+/* Color del logotipo — reservado al isologotipo, nunca UI ni fondo */
+--vk-logo-blue:#0D91D3;--vk-logo-orange:#E86D1A;--vk-logo-lime:#B1C427;--vk-logo-grey:#4D4D4D;
+/* Roles de interfaz */
+--vk-surface:#FFFFFF;--vk-surface-alt:#FAFBFD;--vk-surface-subtle:#EEF1F6;--vk-canvas:#F5F6FA;
+--vk-border:#E3E7EE;--vk-border-strong:#D6DCE6;--vk-border-dashed:#C9D0DC;
+--vk-text:#0F1B2E;--vk-text-strong-2:#3A465C;--vk-text-muted:#5C6B85;--vk-text-subtle:#98A2B3;
+--vk-accent:#E0773E;--vk-accent-hover:#C9642F;--vk-accent-soft:rgba(224,119,62,0.16);
+--vk-table-header:#9199A6;--vk-fill-subtle:#F2F4F8;
+--vk-disabled-bg:#EDEFF4;--vk-disabled-text:#A9B2C0;
+--vk-brand-deep:#001332;--vk-on-brand:#FFFFFF;--vk-on-brand-muted:#9FB2CE;--vk-on-brand-soft:#D7E2F1;--vk-on-brand-border:#14315B;
+/* Semanticos — un solo significado en todo el ecosistema */
+--vk-success:#1D9E75;--vk-warning:#EF9F27;--vk-danger:#E24B4A;--vk-info:#0B6FA4;
+--vk-success-fg:#12795A;--vk-success-bg:#E8F7F1;
+--vk-warning-fg:#8A5A0B;--vk-warning-bg:#FDF3E1;
+--vk-danger-fg:#A82F2E;--vk-danger-bg:#FDECEC;--vk-danger-border:#F6D5D4;
+--vk-info-fg:#0B6FA4;--vk-info-bg:#E7F5FE;
+--vk-risk-fg:#B65418;--vk-risk-bg:#FDEDE3;
+--vk-pattern-fg:#5B6A16;--vk-pattern-bg:#F5F9DC;
+/* Color de datos */
+--vk-data-null:#E4E9F2;
+--vk-data-seq-1:#E4E9F2;--vk-data-seq-2:#DAE667;--vk-data-seq-3:#FFD83E;--vk-data-seq-4:#FF7335;--vk-data-seq-5:#D8481B;
+--vk-data-div-1:#0B6FA4;--vk-data-div-2:#3BBEFC;--vk-data-div-3:#EEF1F6;--vk-data-div-4:#FF9D6E;--vk-data-div-5:#D8481B;
+--vk-data-cat-1:#0D91D3;--vk-data-cat-2:#E86D1A;--vk-data-cat-3:#B1C427;--vk-data-cat-4:#1D9E75;--vk-data-cat-5:#6C4FB8;--vk-data-cat-6:#98A2B3;
+}

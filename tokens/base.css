@@ -1,0 +1,4 @@
+body{font-family:var(--vk-font-ui);color:var(--vk-text);background:var(--vk-canvas);-webkit-font-smoothing:antialiased}
+a{color:var(--vk-info);text-decoration:none}
+a:hover{color:var(--vk-brand-deep)}
+.vk-tabular{font-variant-numeric:tabular-nums}

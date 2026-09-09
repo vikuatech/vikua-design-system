@@ -1,0 +1,19 @@
+/* Poppins — marca, titulos y cifras. Public Sans — interfaz, datos y parrafos.
+   Subset latino extraido de los binarios que acompanan al sistema. */
+@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/poppins-400.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url("../assets/fonts/poppins-500.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url("../assets/fonts/poppins-600.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url("../assets/fonts/poppins-700.woff2") format('woff2')}
+@font-face{font-family:'Public Sans';font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/public-sans-400.woff2") format('woff2')}
+@font-face{font-family:'Public Sans';font-style:normal;font-weight:500;font-display:swap;src:url("../assets/fonts/public-sans-500.woff2") format('woff2')}
+@font-face{font-family:'Public Sans';font-style:normal;font-weight:600;font-display:swap;src:url("../assets/fonts/public-sans-600.woff2") format('woff2')}
+@font-face{font-family:'Public Sans';font-style:normal;font-weight:700;font-display:swap;src:url("../assets/fonts/public-sans-700.woff2") format('woff2')}
+
+/* ITC Avant Garde Gothic — tipografia primaria de Apalanca por Vikua.
+   El manual pide negrita o extranegrita; solo se entrego el peso Medium (500),
+   asi que 600 y 700 se sintetizan hasta que lleguen los archivos reales. */
+@font-face{font-family:'ITC Avant Garde Gothic';font-style:normal;font-weight:500;font-display:swap;src:url("../fonts/ITC_Avant_Garde_Gothic_Medium.otf") format('opentype')}
+
+/* TT FORS — tipografia auxiliar de Apalanca: texto, tablas, informes e interfaz.
+   Archivo entregado: version Trial, peso Regular (400). */
+@font-face{font-family:'TT FORS';font-style:normal;font-weight:400;font-display:swap;src:url("../fonts/TT_Fors_Trial_Regular.ttf") format('truetype')}

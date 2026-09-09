@@ -1,0 +1,18 @@
+# Normaliza saltos de linea en el repositorio, respeta los nativos en el worktree.
+* text=auto
+
+*.css   text
+*.jsx   text
+*.js    text
+*.json  text
+*.md    text
+*.html  text
+*.ts    text
+
+# Binarios: nunca diff ni normalizacion.
+*.woff2 binary
+*.otf   binary
+*.ttf   binary
+*.png   binary
+*.jpg   binary
+*.pdf   binary

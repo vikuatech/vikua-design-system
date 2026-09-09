@@ -1,0 +1,25 @@
+<!-- @dsCard group="Accesibilidad" viewport="700x300" name="Pares y usos prohibidos" subtitle="Qué combinación se aprueba y cuál nunca" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css"><style>body{margin:0;padding:16px;background:var(--vk-surface);font-family:var(--vk-font-ui);color:var(--vk-text)}.h{font-size:12px;color:var(--vk-text-muted);font-variant-numeric:tabular-nums}.u{font-size:11.5px;color:var(--vk-text-subtle);margin-top:2px}.lab{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--vk-text-subtle);font-weight:700}.ok{color:#12795A;font-weight:700}.no{color:#A82F2E;font-weight:700}.lg{color:#8A5A0B;font-weight:700}</style></head><body><div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+<div>
+<div class="lab" style="color:#12795A">Aprobado</div>
+<div style="display:flex;flex-direction:column;gap:9px;margin-top:12px;font-size:13.5px;color:var(--vk-text-strong-2)">
+<div style="display:flex;gap:10px"><span class="ok">✓</span>Lima, naranja y azul del logo <strong>solo</strong> sobre azul #001332 o blanco</div>
+<div style="display:flex;gap:10px"><span class="ok">✓</span>Rótulo blanco sobre naranja de acción a 14 px con peso 600: es interfaz, cumple el umbral de 3:1</div>
+<div style="display:flex;gap:10px"><span class="ok">✓</span>Texto de cuerpo en #0F1B2E o #5C6B85 sobre blanco y sobre #F5F6FA</div>
+<div style="display:flex;gap:10px"><span class="ok">✓</span>Sobre azul corporativo: blanco, #D7E2F1 y #9FB2CE (este último solo en apoyo)</div>
+<div style="display:flex;gap:10px"><span class="ok">✓</span>Etiquetas de estado siempre con su par fg/bg del token (#12795A sobre #E8F7F1, etc.)</div>
+</div>
+</div>
+<div>
+<div class="lab" style="color:#A82F2E">Prohibido</div>
+<div style="display:flex;flex-direction:column;gap:9px;margin-top:12px;font-size:13.5px;color:var(--vk-text-strong-2)">
+<div style="display:flex;gap:10px"><span class="no">✕</span>Lima #B1C427 como texto sobre blanco: 1,9:1</div>
+<div style="display:flex;gap:10px"><span class="no">✕</span>Texto azul sobre lima: 1,8:1</div>
+<div style="display:flex;gap:10px"><span class="no">✕</span>Lima o amarillo sobre el naranja de acción</div>
+<div style="display:flex;gap:10px"><span class="no">✕</span>Párrafos en #98A2B3: es color de etiqueta y placeholder</div>
+<div style="display:flex;gap:10px"><span class="no">✕</span>Recolorear o tintar el isotipo; colocarlo sobre fondos de bajo contraste</div>
+<div style="display:flex;gap:10px"><span class="no">✕</span>Comunicar estado solo con color: siempre acompañado de rótulo</div>
+</div>
+</div>
+</div>
+<div class="u" style="margin-top:16px">Foco visible en todo control interactivo: borde naranja 1,5 px más anillo de 3 px. El resaltado del mapa es contorno blanco de 2 px, no cambio de relleno, para no alterar el valor del dato.</div></body></html>

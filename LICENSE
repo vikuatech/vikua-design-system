@@ -1,0 +1,35 @@
+Copyright (c) 2026 Vikua. Todos los derechos reservados.
+
+Este repositorio contiene material propietario de Vikua: identidad de marca,
+logotipos, tokens de diseno, componentes y documentacion del Sistema de Diseno
+Vikua, junto con los temas de los productos bajo su paraguas (Vikua Platform,
+Apalanca, Vikua Studio, Taxmind).
+
+Uso permitido
+  Queda autorizado su uso, copia y modificacion unicamente dentro de proyectos
+  de Vikua y de terceros contratados por Vikua para ese fin.
+
+Uso no permitido
+  Redistribucion publica, sublicencia, venta o uso de la marca, los logotipos y
+  los assets fuera de proyectos de Vikua, sin autorizacion escrita.
+
+Componentes de terceros
+  Las siguientes piezas NO son propiedad de Vikua y se rigen por la licencia de
+  su titular. Antes de usarlas en produccion, verificar la licencia adquirida:
+
+  - Poppins y Public Sans (assets/fonts/*.woff2) — SIL Open Font License 1.1.
+    Uso libre, incluido comercial.
+  - ITC Avant Garde Gothic (fonts/ITC_Avant_Garde_Gothic_Medium.otf) — licencia
+    comercial de Monotype. Solo el peso Medium fue entregado. Requiere licencia
+    valida para web y producto; no redistribuir fuera de Vikua.
+  - TT FORS (fonts/TT_Fors_Trial_Regular.ttf) — version TRIAL de TypeType. La
+    licencia de prueba prohibe el uso comercial y en produccion. Debe sustituirse
+    por la version licenciada antes de publicar cualquier pieza de Apalanca.
+  - Feather Icons — MIT. Se carga desde CDN, no se versiona aqui.
+
+  Por estas dos ultimas, este repositorio debe permanecer PRIVADO mientras
+  contenga los archivos de fuente.
+
+Manual de marca
+  uploads/apalanca-manual.pdf es documentacion interna de identidad corporativa.
+  No es material de difusion publica.

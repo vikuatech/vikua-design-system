@@ -1,0 +1,67 @@
+{
+  "name": "@vikuatech/design-system",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Sistema de Diseno Vikua: tokens, 26 componentes React, guidelines, UI kit y Agent Skill. Fuente de verdad visual de Vikua Platform, Apalanca, Vikua Studio y Taxmind.",
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Vikua",
+  "homepage": "https://github.com/vikuatech/vikua-design-system#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikuatech/vikua-design-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vikuatech/vikua-design-system/issues"
+  },
+  "keywords": [
+    "vikua",
+    "design-system",
+    "design-tokens",
+    "react",
+    "apalanca",
+    "taxmind",
+    "vikua-studio"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./styles.css": "./styles.css",
+    "./tokens/*": "./tokens/*",
+    "./components/*": "./components/*",
+    "./assets/*": "./assets/*",
+    "./fonts/*": "./fonts/*",
+    "./adherence": "./_adherence.oxlintrc.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "styles.css",
+    "tokens/",
+    "components/",
+    "assets/",
+    "fonts/",
+    "_adherence.oxlintrc.json",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "scripts": {
+    "check": "node scripts/check-exports.mjs",
+    "lint:adherence": "npx --yes oxlint@1 -c _adherence.oxlintrc.json ."
+  }
+}

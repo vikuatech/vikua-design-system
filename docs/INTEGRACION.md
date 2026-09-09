@@ -91,7 +91,7 @@ npm de por medio: npm instala directo del repositorio de git.
 ### B.1 Instalar
 
 ```bash
-npm install "git+ssh://git@github.com/vikuatech/vikua-design-system.git#v1.0.0"
+npm install "github:vikuatech/vikua-design-system#v1.0.0"
 ```
 
 Queda en `package.json` como:
@@ -99,9 +99,19 @@ Queda en `package.json` como:
 ```json
 {
   "dependencies": {
-    "@vikuatech/design-system": "git+ssh://git@github.com/vikuatech/vikua-design-system.git#v1.0.0"
+    "@vikuatech/design-system": "github:vikuatech/vikua-design-system#v1.0.0"
   }
 }
+```
+
+La forma corta `github:` usa la credencial de git que ya tenga la maquina, sea
+llave SSH o el Windows Credential Manager, asi que funciona para todo el equipo
+sin que cada uno edite el `package.json`. Si un entorno necesita forzar el
+transporte, las dos formas largas son equivalentes:
+
+```bash
+npm install "git+ssh://git@github.com/vikuatech/vikua-design-system.git#v1.0.0"    # llave SSH
+npm install "git+https://github.com/vikuatech/vikua-design-system.git#v1.0.0"      # PAT / credential manager
 ```
 
 **Fija siempre un tag** (`#v1.0.0`), no `#main`: con `main` cada `npm install`
@@ -198,18 +208,22 @@ salida a internet debe vendorizar ese archivo y servirlo local.
 
 ### B.5 En CI
 
-El runner no tiene tus llaves SSH. Lo mas simple es reescribir el protocolo con
-un token antes de instalar, y dejar el `package.json` intacto:
+El runner no tiene credenciales para un repo privado. Lo mas simple es darle un
+token a git antes de instalar, y dejar el `package.json` intacto:
 
 ```yaml
 - name: Autenticar git contra el repo del sistema de diseño
-  run: git config --global url."https://x-access-token:${{ secrets.VIKUA_DS_TOKEN }}@github.com/".insteadOf "ssh://git@github.com/"
+  run: |
+    git config --global url."https://x-access-token:${{ secrets.VIKUA_DS_TOKEN }}@github.com/".insteadOf "https://github.com/"
+    git config --global url."https://x-access-token:${{ secrets.VIKUA_DS_TOKEN }}@github.com/".insteadOf "ssh://git@github.com/"
 - run: npm ci
 ```
 
-Asi el `git+ssh://` del `package.json` sigue funcionando en la maquina del
-desarrollador y en el runner, sin token en el repositorio. La alternativa es una
-deploy key de solo lectura por proyecto consumidor.
+`VIKUA_DS_TOKEN` es un PAT (fine-grained, solo lectura de contenido sobre este
+repositorio) guardado como secret del proyecto consumidor. Las dos lineas cubren
+las dos formas de escribir la dependencia, asi que el mismo `package.json`
+funciona en la maquina del desarrollador y en el runner, sin token versionado.
+La alternativa es una deploy key de solo lectura por proyecto consumidor.
 
 ### B.6 Si mas adelante quieren registro npm
 
@@ -322,7 +336,7 @@ proyecto que lo consume.
 
 1. `scripts/install-skill.ps1` o el submodulo en `.claude/skills/vikua-design`
    → Claude Code ya diseña con la marca.
-2. `npm install "git+ssh://git@github.com/vikuatech/vikua-design-system.git#v1.0.0"`
+2. `npm install "github:vikuatech/vikua-design-system#v1.0.0"`
    y una linea de configuracion del bundler (seccion B.4).
 3. `import "@vikuatech/design-system/styles.css"` en la raiz de la app.
 4. Si no es Vikua Platform, `data-vk-theme` en el contenedor raiz.

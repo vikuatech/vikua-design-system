@@ -17,7 +17,7 @@ Guía completa en **[`docs/INTEGRACION.md`](docs/INTEGRACION.md)**. En corto:
 git submodule add git@github.com:vikuatech/vikua-design-system.git .claude/skills/vikua-design
 
 # 2 · Tokens y componentes React en la app
-npm install "git+ssh://git@github.com/vikuatech/vikua-design-system.git#v1.0.0"
+npm install "github:vikuatech/vikua-design-system#v1.0.0"
 ```
 
 ```jsx
